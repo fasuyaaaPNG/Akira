@@ -62,20 +62,20 @@ html {
         margin-right: 16px;
     }
 
-    input[type=text] {
+    input[type=text], input[type=text] {
         background-color: transparent;
         width: 200px;
         border: none;
         color: #Fbfbfb;
     }
 
-    input[type=text]:focus {
+    input[type=text]:focus, input[type=text]:focus {
         outline: none;
         color: #Fbfbfb;
         border: none;
     }
     
-    input[type=text]::placeholder {
+    input[type=text]::placeholder, input[type=text]::placeholder {
         color: #B1B1B1 !important; 
         font-family: "Akshar", sans-serif;
         font-size: 14px;
