@@ -13,7 +13,7 @@ html {
     }
 
     .judulDesk {
-        width: max-content;
+        width: 330px;
         margin-left: auto;
         margin-right: auto;
         display: flex;
@@ -32,9 +32,12 @@ html {
     .judul {
         font-weight: 400;
         font-size: 33px;
+        text-align: center;
+        width: 100%;text-overflow: ellipsis;
         margin: 0;
         margin-bottom: 4px;
         font-family: "Anton", sans-serif;
+        word-wrap: break-word;
     }
 
     .desk {
