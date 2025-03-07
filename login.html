@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/login.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="content">
-        <div class="judulDesk">
-            <p class="judul">AKIRA</p>
-            <p class="desk">Tolong masuk untuk menggunakan internet asli Gus Akira dengan Shogun RWB-nya!</p>
-        </div>
-        <div class="secInput">
-            <div class="input inputAtas" onclick="document.getElementById('username').focus()">
-                <img src="./assets/userIcon.svg" alt="" class="icon1">
-                <input type="text" name="" id="username" placeholder="Username">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="expires" content="-1" />
+        <title>Akira hotspot > login</title>
+        <link rel="stylesheet" href="./css/login.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="content">
+            <div class="judulDesk">
+                <p class="judul">AKIRA</p>
+                <p class="desk">Tolong masuk untuk menggunakan internet asli Gus Akira dengan Shogun RWB-nya!</p>
             </div>
-            <div class="input inputBawah" onclick="document.getElementById('password').focus()">
-                <img src="./assets/passIcon.svg" alt="" class="icon1">
-                <input type="password" name="" id="password" placeholder="Password">
-            </div>
-            <button class="sambung">Sambungkan</button>
-            <p class="disclaimer">Dibuat ulang oleh kelompok pecinta Shogun RWB.</p>
+            <form class="secInput" name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+                <div class="input inputAtas" onclick="document.getElementById('username').focus()">
+                    <img src="./assets/userIcon.svg" alt="" class="icon1">
+                    <input type="text" name="username" id="username" placeholder="Username">
+                </div>
+                <div class="input inputBawah" onclick="document.getElementById('password').focus()">
+                    <img src="./assets/passIcon.svg" alt="" class="icon1">
+                    <input type="password" name="password" id="password" placeholder="Password">
+                </div>
+                <input class="sambung" type="submit" value="Sambungkan">
+                <p class="disclaimer">Dibuat ulang oleh kelompok pecinta Shogun RWB.</p>
+            </form>
         </div>
-    </div>
-</body>
+    </body>
 </html>

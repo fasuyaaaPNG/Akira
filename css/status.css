@@ -19,20 +19,26 @@ html {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 158px;
+        margin-top: 50px;
         margin-bottom: 37px;
+    }
+
+    .image {
+        width: 135px;
+        height: 135px;
+        margin-bottom: 24px;
     }
 
     .judul {
         font-weight: 400;
-        font-size: 56px;
+        font-size: 33px;
         margin: 0;
         margin-bottom: 4px;
         font-family: "Anton", sans-serif;
     }
 
     .desk {
-        width: 270px;
+        width: 150px;
         text-align: center;
         font-size: 14px;
         font-weight: 500;
@@ -40,58 +46,46 @@ html {
         font-family: "Akshar", sans-serif;
     }
 
-    .secInput {
-        width: max-content;
+    .secStat {
+        width: 80%;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .input {
+    .stat {
         border: 1px solid #B1B1B1;
-        width: max-content;
+        width: 100%;
         display: flex;
-        padding-left: 12px;
-        padding-right: 12px;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        margin: 0;
         border-radius: 12px;
     }
 
-    .icon1 {
-        width: 25px;
-        height: 25px;
-        margin-right: 16px;
-    }
-
-    input[type=text], input[type=password] {
-        background-color: transparent;
-        width: 200px;
-        border: none;
-        color: #Fbfbfb;
-    }
-
-    input[type=text]:focus, input[type=password]:focus {
-        outline: none;
-        color: #Fbfbfb;
-        border: none;
-    }
-    
-    input[type=text]::placeholder, input[type=password]::placeholder {
-        color: #B1B1B1 !important; 
+    .textStat {
+        margin-left: 12px;
+        color: #FBFBFB;
         font-family: "Akshar", sans-serif;
         font-size: 14px;
-        font-weight: 300;
+        font-weight: 400;
     }
 
-    .inputAtas {
-        margin-bottom: 23px;
+    .textStatMargin {
+        margin-bottom: 16px;
     }
 
-    .inputBawah {
+    .textStatMargin2 {
         margin-bottom: 32px;
     }
 
-    .sambung {
+    .statUtama {
+        color: #B1B1B1;
+    }
+
+    .titikDua {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .keluar {
         background: linear-gradient(180deg, #BC1517 0%, #A71517 100%);
         border: 1px solid transparent; 
         outline: none;
@@ -102,23 +96,13 @@ html {
         width: 100%;
         height: 43px;
         border-radius: 12px;
-        margin-bottom: 10px;
         transition: all 0.5s ease;
     }
     
-    .sambung:hover {
+    .keluar:hover {
         background: linear-gradient(180deg, #BC151733 0%, #BC151733 100%) ;
         transition: all 0.5s ease;
         border: 1px solid #BC1517;
         cursor: pointer;
-    }
-
-    .disclaimer {
-        font-family: "Akshar", sans-serif;
-        font-size: 12px;
-        font-weight: 500;
-        color: #B1B1B1;
-        width: 100%;
-        text-align: center;
     }
 }
