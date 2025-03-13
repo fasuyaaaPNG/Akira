@@ -3,30 +3,58 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta http-equiv="pragma" content="no-cache" />
         <meta http-equiv="expires" content="-1" />
         <title>Akira hotspot > login</title>
         <link rel="stylesheet" href="./css/login.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        <style>
+            @font-face {
+                font-family: 'Akshar';
+                src: url('./fonts/Akshar/Akshar-VariableFont_wght.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Anton';
+                src: url('./fonts/Anton/Anton-Regular.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+        </style>
+        <script src="md5.js"></script>
+        <script>
+            function doLogin() {
+                $(if chap-id)
+                var chapid = "$(chap-id)";
+                var chapchallenge = "$(chap-challenge)";
+                var password = document.login.password.value;
+                document.login.password.value = hexMD5(chapid + password + chapchallenge);
+                $(endif)
+                return true;
+            }
+        </script>
     </head>
     <body>
         <div class="content">
+            <div class="element">
+                <img draggable="false" src="./assets/lingkaranAtas.svg" alt="" class="lingkaranAtas">
+                <img draggable="false" src="./assets/lingkaranTengah.svg" alt="" class="lingkaranTengah">
+                <img draggable="false" src="./assets/lingkaranBawah.svg" alt="" class="lingkaranBawah">
+            </div>
             <div class="judulDesk">
                 <p class="judul">AKIRA</p>
                 <p class="desk">Tolong masuk untuk menggunakan internet asli Gus Akira dengan Shogun RWB-nya!</p>
             </div>
-            <form class="secInput" name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+            <form class="secInput" name="login" action="$(link-login-only)" method="post" onsubmit="return doLogin()">
+                <input type="hidden" name="dst" value="$(link-orig-esc)">
+                <input type="hidden" name="popup" value="true">
                 <div class="input inputAtas" onclick="document.getElementById('username').focus()">
-                    <img src="./assets/userIcon.svg" alt="" class="icon1">
-                    <input type="text" name="username" id="username" placeholder="Username">
+                    <img draggable="false" src="./assets/userIcon.svg" alt="" class="icon1">
+                    <input type="text" name="username" id="username" placeholder="Username" required>
                 </div>
                 <div class="input inputBawah" onclick="document.getElementById('password').focus()">
-                    <img src="./assets/passIcon.svg" alt="" class="icon1">
-                    <input type="password" name="password" id="password" placeholder="Password">
+                    <img draggable="false" src="./assets/passIcon.svg" alt="" class="icon1">
+                    <input type="password" name="password" id="password" placeholder="Password" required>
                 </div>
                 <input class="sambung" type="submit" value="Sambungkan">
                 <p class="disclaimer">Dibuat ulang oleh kelompok pecinta Shogun RWB.</p>

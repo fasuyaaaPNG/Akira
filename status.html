@@ -3,47 +3,60 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta http-equiv="pragma" content="no-cache" />
         <meta http-equiv="expires" content="-1" />
         <title>Akira hotspot > status</title>
         <link rel="stylesheet" href="./css/status.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        <style>
+            @font-face {
+                font-family: 'Akshar';
+                src: url('./fonts/Akshar/Akshar-VariableFont_wght.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Anton';
+                src: url('./fonts/Anton/Anton-Regular.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+        </style>
+        <script>
+            window.onload = function() {
+                const textElement = document.getElementById("long-text");
+                const originalText = "SELAMAT DATANG, $(username-esc)!";
+                const maxLength = 40;
+                if (originalText.length > maxLength) {
+                    textElement.textContent = originalText.substring(0, maxLength - 9) + "........" + originalText.slice(-1);
+                } else {
+                    textElement.textContent = originalText;
+                }
+            }
+        </script>
     </head>
     <body>
         <div class="content">
             <div class="judulDesk">
                 <img class="image" loading="eager" src="./assets/imageStatus.png" alt="">
-                <p class="judul" id="long-text">SELAMAT DATANG, QUEEN!</p>
-                <script>
-                    const textElement = document.getElementById("long-text");
-                    const originalText = textElement.textContent;
-                    const maxLength = 40;
-            
-                    if (originalText.length > maxLength) {
-                        const truncated = originalText.substring(0, maxLength - 9) + "........" + originalText.slice(-1);
-                        textElement.textContent = truncated;
-                    }
-                </script>
+                <p class="judul" id="long-text"></p>
                 <p class="desk">Tolong dilihat infonya yah.</p>
             </div>
             <div class="secStat">
                 <div class="stat textStatMargin">
-                    <p class="textStat"><span class="statUtama">IP Address<span class="titikDua">:</span></span>192.168.xx.xx</p>
+                    <p class="textStat"><span class="statUtama">IP Address<span class="titikDua">:</span></span>$(ip)</p>
                 </div>
                 <div class="stat textStatMargin">
-                    <p class="textStat"><span class="statUtama">Bytes Up/Down<span class="titikDua">:</span></span>0 KiB / 0 KiB</p>
+                    <p class="textStat"><span class="statUtama">Bytes Up/Down<span class="titikDua">:</span></span>$(bytes-in-nice) / $(bytes-out-nice)</p>
                 </div>
                 <div class="stat textStatMargin">
-                    <p class="textStat"><span class="statUtama">Connected</span><span class="titikDua">:</span></span>00.00.00</p>
+                    <p class="textStat"><span class="statUtama">Connected<span class="titikDua">:</span></span>$(uptime)</p>
                 </div>
                 <div class="stat textStatMargin2">
-                    <p class="textStat"><span class="statUtama">Status Refresh<span class="titikDua">:</span></span>0m</p>
+                    <p class="textStat"><span class="statUtama">Status Refresh<span class="titikDua">:</span></span>$(refresh-timeout)</p>
                 </div>
-                <input class="keluar" type="submit" value="Keluar ajah">
+                <form action="$(link-logout)" method="post">
+                    <input class="keluar" type="submit" value="Keluar ajah">
+                </form>
             </div>
         </div>
     </body>
