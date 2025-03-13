@@ -2,143 +2,206 @@ html {
     padding: 0;
 }
 
-@media screen and (max-width: 640px) {
+body {
+    background-image: url("../assets/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat; 
+    margin: 0;
+    background-color: black;
+    color: #FBFBFB;
+}
+
+.content {
+    position: relative;
+}
+
+.lingkaranAtas {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+.lingkaranTengah {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+}
+
+.lingkaranBawah {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+
+.judulDesk {
+    width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 37px;
+}
+
+.image {
+    width: 154px;
+    height: 102px;
+    margin-bottom: 24px;
+}
+
+.judul {
+    font-weight: 400;
+    font-size: 33px;
+    text-align: center;
+    width: 100%;text-overflow: ellipsis;
+    margin: 0;
+    margin-bottom: 4px;
+    font-family: "Anton", sans-serif;
+    word-wrap: break-word;
+}
+
+.desk {
+    width: 150px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    font-family: "Akshar", sans-serif;
+}
+
+.secStat {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stat {
+    border: 1px solid #B1B1B1;
+    width: 100%;
+    display: flex;
+    margin: 0;
+    border-radius: 12px;
+}
+
+.textStat {
+    margin-left: 12px;
+    color: #FBFBFB;
+    font-family: "Akshar", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.textStatMargin {
+    margin-bottom: 16px;
+}
+
+.textStatMargin2 {
+    margin-bottom: 32px;
+}
+
+.statUtama {
+    color: #B1B1B1;
+}
+
+.titikDua {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.statSesByte {
+    display: flex;
+    justify-content: space-between;
+}
+
+.statSes {
+    border: 1px solid #B1B1B1;
+    width: 45%;
+    border-radius: 12px;
+}
+
+.keluar {
+    background: linear-gradient(180deg, #BC1517 0%, #A71517 100%);
+    border: 1px solid transparent; 
+    outline: none;
+    font-family: "Akshar", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #FBFBFB;
+    width: 100%;
+    height: 43px;
+    border-radius: 12px;
+    transition: all 0.5s ease;
+}
+
+.keluar:hover {
+    background: linear-gradient(180deg, #BC151733 0%, #BC151733 100%) ;
+    transition: all 0.5s ease;
+    border: 1px solid #BC1517;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
     body {
-        background-image: url("../assets/bg.png");
+        background-image: url("../assets/bgDesktop.png");
         background-size: cover;
         background-repeat: no-repeat; 
         margin: 0;
-        background-color: black;
+        background-color: #252525;
         color: #FBFBFB;
+    }
+
+    .lingkaranBawah {
+        top: 110%;
     }
 
     .content {
-        position: relative;
-    }
-
-    .lingkaranAtas {
-        position: absolute;
-        top: 0%;
-        right: 0%;
-    }
-
-    .lingkaranTengah {
-        position: absolute;
-        top: 70%;
-        left: 20%;
-    }
-    
-    .lingkaranBawah {
-        position: absolute;
-        bottom: 0%;
-        left: 0%;
-    }
-
-    .judulDesk {
-        width: 330px;
+        border: 1px solid rgba(251, 251, 251, 0.603);
+        width: 500px;
+        margin-top: 35px;
+        margin-bottom: 30px;
         margin-left: auto;
         margin-right: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 30px;
-        margin-bottom: 37px;
-    }
-
-    .image {
-        width: 154px;
-        height: 102px;
-        margin-bottom: 24px;
+        border-radius: 20px;
+        backdrop-filter: blur(8px);
+        background-color: #fbfbfb13;
     }
 
     .judul {
-        font-weight: 400;
-        font-size: 33px;
-        text-align: center;
-        width: 100%;text-overflow: ellipsis;
-        margin: 0;
-        margin-bottom: 4px;
-        font-family: "Anton", sans-serif;
-        word-wrap: break-word;
+        font-size: 40px;
+        width: 460px;
     }
 
-    .desk {
-        width: 150px;
-        text-align: center;
-        font-size: 14px;
-        font-weight: 500;
-        margin: 0;
-        font-family: "Akshar", sans-serif;
-    }
-
-    .secStat {
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .stat {
-        border: 1px solid #B1B1B1;
-        width: 100%;
-        display: flex;
-        margin: 0;
-        border-radius: 12px;
-    }
-
-    .textStat {
-        margin-left: 12px;
-        color: #FBFBFB;
-        font-family: "Akshar", sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-    }
-
-    .textStatMargin {
-        margin-bottom: 16px;
-    }
-
-    .textStatMargin2 {
-        margin-bottom: 32px;
-    }
-
-    .statUtama {
-        color: #B1B1B1;
-    }
-
-    .titikDua {
-        margin-left: 8px;
-        margin-right: 8px;
-    }
-
-    .statSesByte {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .statSes {
-        border: 1px solid #B1B1B1;
-        width: 45%;
-        border-radius: 12px;
+    .judulDesk {
+        margin-top: 40px;
+        margin-bottom: 37px;
     }
 
     .keluar {
-        background: linear-gradient(180deg, #BC1517 0%, #A71517 100%);
-        border: 1px solid transparent; 
-        outline: none;
-        font-family: "Akshar", sans-serif;
-        font-size: 14px;
-        font-weight: 600;
-        color: #FBFBFB;
-        width: 100%;
-        height: 43px;
-        border-radius: 12px;
-        transition: all 0.5s ease;
+        margin-bottom: 40px;
+    }
+
+}
+
+@media screen and (min-width: 1920px) {
+    .content {
+        margin-top: 80px;
+    }
+
+    .lingkaranAtas {
+        width: 250px;
+    }
+
+    .lingkaranBawah {
+        top: 650px;
+        width: 400px;
     }
     
-    .keluar:hover {
-        background: linear-gradient(180deg, #BC151733 0%, #BC151733 100%) ;
-        transition: all 0.5s ease;
-        border: 1px solid #BC1517;
-        cursor: pointer;
+    .judul {
+        font-weight: 400;
+        font-size: 70px;
+        margin: 0;
+        margin-bottom: 4px;
+        font-family: "Anton", sans-serif;
     }
 }
