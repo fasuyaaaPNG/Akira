@@ -33,6 +33,21 @@
                 return true;
             }
         </script>
+        <script>
+            function checkScreenSize() {
+                const width = window.innerWidth;
+        
+                if (width >= 641 && width <= 1023) {
+                    while (true) {
+                        alert("Layout untuk ukuran layar ini tidak tersedia!.");
+                        if (window.innerWidth < 641 || window.innerWidth > 1023) break;
+                    }
+                }
+            }
+        
+            window.onload = checkScreenSize;
+            window.addEventListener('resize', checkScreenSize);
+        </script>
     </head>
     <body>
         <div class="element">
