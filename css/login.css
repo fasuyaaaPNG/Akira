@@ -152,7 +152,7 @@ input[type=text]::placeholder, input[type=password]::placeholder {
     .content {
         border: 1px solid rgba(251, 251, 251, 0.603);
         width: 400px;
-        margin-top: 120px;
+        margin-top: 100px;
         margin-left: auto;
         margin-right: auto;
         border-radius: 20px;
