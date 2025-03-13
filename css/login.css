@@ -14,14 +14,12 @@ html {
 
     .content {
         position: relative;
-        overflow-x: hidden;
-        height: 100vh;
     }
 
     .lingkaranAtas {
         position: absolute;
-        top: 0%;
-        left: 50%;
+        top: -50%;
+        right: 0%;
     }
 
     .lingkaranTengah {
@@ -32,7 +30,7 @@ html {
     
     .lingkaranBawah {
         position: absolute;
-        top: 80%;
+        top: 100%;
         left: 0%;
     }
 
