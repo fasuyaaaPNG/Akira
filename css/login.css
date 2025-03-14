@@ -174,7 +174,7 @@ input[type=text]::placeholder, input[type=password]::placeholder {
 
 @media screen and (min-width: 1920px) {
     body {
-        height: 80vh;
+        height: 75vh;
     }
 
     .judul {
