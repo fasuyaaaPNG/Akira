@@ -140,7 +140,7 @@ body {
         color: #FBFBFB;
         display: grid;
         place-items: center;
-        height: 100vh;
+        height: 95vh;
         border: 1px solid red;
     }
 
