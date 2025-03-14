@@ -138,6 +138,10 @@ body {
         margin: 0;
         background-color: #252525;
         color: #FBFBFB;
+        display: grid;
+        place-items: center;
+        height: max-content;
+        border: 1px solid red;
     }
 
     .lingkaranBawah {
