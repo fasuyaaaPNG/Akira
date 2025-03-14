@@ -141,7 +141,6 @@ body {
         display: grid;
         place-items: center;
         height: max-content;
-        border: 1px solid red;
     }
 
     .lingkaranBawah {
